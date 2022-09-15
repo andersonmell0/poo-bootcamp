@@ -75,7 +75,7 @@ public class Dev {
 	@Override
 	public String toString() {
 		return "Dev [Nome=" + Nome + ", conteudosInscritos=" + conteudosInscritos + ", conteudosConcluidos="
-				+ conteudosConcluidos + "]";
+				+ conteudosConcluidos + ", calcularTotalXp()=" + calcularTotalXp() + "]";
 	}
 	
 }

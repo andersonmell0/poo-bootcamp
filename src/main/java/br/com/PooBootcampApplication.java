@@ -20,7 +20,7 @@ public class PooBootcampApplication {
 		Curso curso1 = new Curso();
 		curso1.setTitulo("Introdução Java");
 		curso1.setDescricao("Introdução a Programação Java");
-		curso1.setCargaHoraria(15);
+		curso1.setCargaHoraria(11);
 		
 		Curso curso2 = new Curso();
 		curso2.setTitulo("Curso Java OO");

@@ -8,7 +8,7 @@ public class Mentoria extends Conteudo{
 	
 	@Override
 	public double calculaXp() {
-		return XP_PADRAO + 20;
+		return XP_PADRAO + 20d;
 	}
 	
 	public LocalDate getDataMentoria() {
