@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import br.com.domain.Conteudo;
 import br.com.domain.Curso;
 import br.com.domain.Mentoria;
 
@@ -12,6 +13,7 @@ import br.com.domain.Mentoria;
 public class PooBootcampApplication {
 
 	public static void main(String[] args) {
+		
 		SpringApplication.run(PooBootcampApplication.class, args);
 		
 		Curso curso = new Curso();
@@ -26,6 +28,10 @@ public class PooBootcampApplication {
 		
 		System.out.println(curso);
 		System.out.println(mentoria);
+		
+		//Conteudo conteudo = new Conteudo();
+		//Conteudo conteudo1 = new Curso();
+		//Conteudo conteudo2 = new Mentoria();
 	}
 
 }

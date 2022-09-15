@@ -1,12 +1,67 @@
 package br.com.domain;
 
-import java.util.Date;
+import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Objects;
+import java.util.Set;
 
 public class Bootcamp {
 	
 	private String nome;
 	private String descricao;
-	private Date dataInicial;
-	private Date dataFinal;
+	private final LocalDate dataInicial = LocalDate.now();
+	private final LocalDate dataFinal = dataInicial.plusDays(45);
 	
+	private Set<Devs> inscritos = new HashSet<>();
+	private Set<Conteudo> conteudos = new LinkedHashSet<>();
+	
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public String getDescricao() {
+		return descricao;
+	}
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+	public Set<Devs> getInscritos() {
+		return inscritos;
+	}
+	public void setInscritos(Set<Devs> inscritos) {
+		this.inscritos = inscritos;
+	}
+	public Set<Conteudo> getConteudos() {
+		return conteudos;
+	}
+	public void setConteudos(Set<Conteudo> conteudos) {
+		this.conteudos = conteudos;
+	}
+	public LocalDate getDataInicial() {
+		return dataInicial;
+	}
+	public LocalDate getDataFinal() {
+		return dataFinal;
+	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(conteudos, dataFinal, dataInicial, descricao, inscritos, nome);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Bootcamp other = (Bootcamp) obj;
+		return Objects.equals(conteudos, other.conteudos) && Objects.equals(dataFinal, other.dataFinal)
+				&& Objects.equals(dataInicial, other.dataInicial) && Objects.equals(descricao, other.descricao)
+				&& Objects.equals(inscritos, other.inscritos) && Objects.equals(nome, other.nome);
+	}
+
 }
