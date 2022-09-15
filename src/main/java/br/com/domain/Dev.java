@@ -5,7 +5,7 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
 
-public class Devs {
+public class Dev {
 
 	private String Nome;	
 	private Set<Conteudo> conteudosInscritos = new LinkedHashSet<>();
@@ -67,9 +67,15 @@ public class Devs {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Devs other = (Devs) obj;
+		Dev other = (Dev) obj;
 		return Objects.equals(Nome, other.Nome) && Objects.equals(conteudosConcluidos, other.conteudosConcluidos)
 				&& Objects.equals(conteudosInscritos, other.conteudosInscritos);
+	}
+
+	@Override
+	public String toString() {
+		return "Dev [Nome=" + Nome + ", conteudosInscritos=" + conteudosInscritos + ", conteudosConcluidos="
+				+ conteudosConcluidos + "]";
 	}
 	
 }
